@@ -8,7 +8,7 @@ function setup() {
 
   params = new URLSearchParams(window.location.search)
 
-  if(params.get("fx") && params.get("fy") && params.get("mx") && params.get("my")&& params.get("mp")) {
+  if(params.get("fx") && params.get("fy") && params.get("mx") && params.get("my") && params.get("mp")) {
     freqX = params.get("fx")
     freqY = params.get("fy")
     modx = params.get("mx")
@@ -31,7 +31,9 @@ function randomOne() {
 }
 
 function updateLink () {
-  const link = `https://weightan.github.io/LissajousCurvesJS?      fx=${freqX}&fy=${freqY}&mx=${modx}&my=${mody}&mp=${param}`
+  
+  const link = `https://weightan.github.io/LissajousCurvesJS?fx=${freqX}&fy=${freqY}&mx=${modx}&mp=${param}&my=${mody}`
+  
   select("#permalink").html(link).attribute("href", link)
 }
 
