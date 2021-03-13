@@ -9,11 +9,11 @@ function setup() {
   params = new URLSearchParams(window.location.search)
 
   if(params.get("fx") && params.get("fy") && params.get("mx") && params.get("my") && params.get("mp")) {
-    freqX = params.get("fx")
-    freqY = params.get("fy")
-    modx = params.get("mx")
-    mody = params.get("my")
-    param = params.get("mp")
+    freqX = params.get("fx");
+    freqY = params.get("fy");
+    modx = params.get("mx");
+    mody = params.get("my");
+    param = parseInt(params.get("mp"));
     updateLink()
   } else {
     randomOne()
